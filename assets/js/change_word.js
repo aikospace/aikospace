@@ -18,15 +18,15 @@ var final_name = [String.fromCharCode(34+45),String.fromCharCode(2*8/2/4*41),
 						   String.fromCharCode(138/2),String.fromCharCode(100-17),
 						   String.fromCharCode(84),String.fromCharCode(82),
 						   String.fromCharCode(65)]
-						   
+
 var r_text = new Array ();
 	r_text = ["ONES", "OFFICE", "OPERATORS", "ORGANIZATION", "OBSESSED",
 	              "ORIGAMI","OBJECTS", "OFFICERS", "OAKS", "OATMEALS", "OCARINAS",
 				  "OWLS","OPTIMIZATION", "OPPORTUNITY", "OPENERS", "OMELETTES", "ODYSSEY"]
 
 var r2_text = new Array();
-	
-var idx = 0;	
+
+var idx = 0;
 var idx_array = new Array();
 for (idx=0; idx<r_text.length-1; idx++) {
 	idx_array.push(idx);
@@ -37,10 +37,10 @@ for (idx=0; idx<r_text.length-1; idx++) {
 shuffle(idx_array)
 
 var i=0;
-i = Math.floor(100*Math.random());
+i = Math.floor(10000*Math.random());
 
 function pickChange(){
-	
+
 	//remove timer and create new one, this allows to change the interval each time
 	clearInterval(handler)
 	handler = setInterval(pickChange, interval)
@@ -48,7 +48,7 @@ function pickChange(){
 	//with a very low chance you'll get our name or the words display
 	if (i>0 && i<5 && count < final_value) changeText()
 	else if (i==0 && count < final_value) {changeText2()}
-	
+
 }
 
 function changeText(){
@@ -74,7 +74,7 @@ idx = 0;
 counter = 0;
 
 function changeText2(){
-	
+
 	// Show a random char until counter is right
 	randomORCH(counter)
 	var s = r2_text.join("")
@@ -85,7 +85,7 @@ function changeText2(){
 	idx++;
 
 	/* Each char position should show random chars for n times
-	// and n should decrease to speed up the animation towards 
+	// and n should decrease to speed up the animation towards
 	// the ending */
 	if (idx % (final_name.length-counter) == 0) {
 		// Show the correct char in each position at end of random animation
@@ -93,7 +93,7 @@ function changeText2(){
 		counter++;
 		idx=0;
 	}
-	
+
 	// Stop setting timers
 	if (counter==final_name.length) {
 		clearInterval(handler)
