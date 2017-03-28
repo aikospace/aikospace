@@ -39,6 +39,10 @@
 		content: none;
 	}
 
+	p.blocktext {
+		text-align: center
+	}
+
 	table {
 		border-collapse: collapse;
 		border-spacing: 0;
