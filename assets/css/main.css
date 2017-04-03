@@ -41,6 +41,7 @@
 
 	p.blocktext {
 		text-align: center
+		opacity: 1;
 	}
 
 	table {
@@ -282,6 +283,31 @@
 
 	.align-right {
 		text-align: right;
+	}
+/* Div */
+
+	div.background {
+	  background: url("../../images/earth.jpg") no-repeat fixed center;
+	  border: 2px solid black;
+	}
+
+	div.transbox {
+	  margin-left: 10px;
+		margin-right: 65%;
+		margin-bottom: 10px;
+		margin-top: 30%;
+	  background-color: #535b68;
+	  border: 1px solid black;
+	  opacity: 0.8;
+	  filter: alpha(opacity=80); /* For IE8 and earlier */
+	}
+
+	div.transbox p {
+	  margin: 5%;
+	  font-weight: bold;
+		font-style: italic;
+	  color: #ffffff;
+		text-align: center;
 	}
 
 /* Form */
@@ -717,6 +743,7 @@
 		list-style: disc;
 		margin: 0 0 2rem 0;
 		padding-left: 1em;
+		text-align: center;
 	}
 
 		ul li {
