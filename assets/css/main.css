@@ -40,8 +40,10 @@
 	}
 
 	p.blocktext {
+		font-size: 0.8em;
 		text-align: center
 		opacity: 1;
+
 	}
 
 	table {
@@ -52,6 +54,10 @@
 	body {
 		-webkit-text-size-adjust: none;
 	}
+
+/* Span */
+span.codedirection { unicode-bidi:bidi-override; direction: rtl; }
+
 
 /* Box Model */
 
@@ -283,31 +289,6 @@
 
 	.align-right {
 		text-align: right;
-	}
-/* Div */
-
-	div.background {
-	  background: url("../../images/earth.jpg") no-repeat fixed center;
-	  border: 2px solid black;
-	}
-
-	div.transbox {
-	  margin-left: 10px;
-		margin-right: 65%;
-		margin-bottom: 10px;
-		margin-top: 30%;
-	  background-color: #535b68;
-	  border: 1px solid black;
-	  opacity: 0.8;
-	  filter: alpha(opacity=80); /* For IE8 and earlier */
-	}
-
-	div.transbox p {
-	  margin: 5%;
-	  font-weight: bold;
-		font-style: italic;
-	  color: #ffffff;
-		text-align: center;
 	}
 
 /* Form */
@@ -671,6 +652,13 @@
 			display: block;
 		}
 
+
+		.brand {
+		    max-height: 8.5rem;
+				min-height: 150px;
+
+		}
+
 		.image.left, .image.right {
 			max-width: 40%;
 		}
@@ -711,6 +699,13 @@
 				width: 100%;
 			}
 
+		.image.resiz {
+			display: block;
+			margin: 1rem 0;
+			width: 35%;
+
+
+		}
 		@media screen and (max-width: 736px) {
 
 			.image.main {
